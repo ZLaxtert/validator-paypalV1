@@ -15,7 +15,7 @@
     $ pkg install git -y
     $ pkg install php -y
     $ git clone https://github.com/ZLaxtert/validator-paypalV1
-    $ cd antibounce-email-checker
+    $ cd validator-paypalV1
     $ php cli.php
 
 ## NOTE
