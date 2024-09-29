@@ -35,6 +35,21 @@ $total = count($lists);
 echo "\n\n$WH [$YL!$WH] TOTAL $GR$total$WH LISTS [$YL!$WH]$DEF\n\n";
 foreach ($lists as $list) {
     $no++;
+    // GET SETTINGS
+if (strtolower($mode_proxy) == "off") {
+    $Proxies    = "";
+    $proxy_Auth = $proxy_pwd;
+    $type_proxy = $proxy_type;
+    $apikey     = GetApikey($thisApikey);
+    $APIs       = GetApiS($thisApi);
+} else {
+    $Proxies    = GetProxy($proxy_list);
+    $proxy_Auth = $proxy_pwd;
+    $type_proxy = $proxy_type;
+    $apikey     = GetApikey($thisApikey);
+    $APIs       = GetApiS($thisApi);
+}
+    
     // EXPLODE
     $email = multiexplode(array(":", "|", "/", ";", ""), $list)[0];
     $pass = multiexplode(array(":", "|", "/", ";", ""), $list)[1];
