@@ -75,7 +75,7 @@ if (strtolower($mode_proxy) == "off") {
     }else if (strpos($x, 'SECURITY CHALLENGE!')){
         $limit++;
         save_file("result/limit.txt","$list");
-        echo "[$RD$no$DEF/$GR$total$DEF]$CY LIMIT$DEF =>$BL $email$DEF | [$YL TYPE$DEF: $WH$type$DEF ] [$YL MSG$DEF: $MG$msg$DEF ] | BY$CY DARKXCODE$DEF (DEMO)".PHP_EOL;
+        echo "[$RD$no$DEF/$GR$total$DEF]$CY LIMIT$DEF =>$BL $email$DEF | [$YL TYPE$DEF: $WH$type$DEF ] [$YL MSG$DEF:$MG PROXY LIMIT or PROXY REQUIRED$DEF ] | BY$CY DARKXCODE$DEF (DEMO)".PHP_EOL;
     }else if (strpos($x, '"status":"die"')){
         $die++;
         save_file("result/die.txt","$list");
