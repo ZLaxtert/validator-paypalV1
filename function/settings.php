@@ -22,17 +22,3 @@ $proxy_type = $settings["type_proxy"];
 $thisApikey = $settings["apikey"];
 $thisApi    = $settings["thisAPI"];
 
-// GET SETTINGS
-if (strtolower($mode_proxy) == "off") {
-    $Proxies    = "";
-    $proxy_Auth = $proxy_pwd;
-    $type_proxy = $proxy_type;
-    $apikey     = GetApikey($thisApikey);
-    $APIs       = GetApiS($thisApi);
-} else {
-    $Proxies    = GetProxy($proxy_list);
-    $proxy_Auth = $proxy_pwd;
-    $type_proxy = $proxy_type;
-    $apikey     = GetApikey($thisApikey);
-    $APIs       = GetApiS($thisApi);
-}
