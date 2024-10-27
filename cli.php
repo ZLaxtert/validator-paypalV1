@@ -56,7 +56,7 @@ if (strtolower($mode_proxy) == "off") {
 
     $email = str_replace("+", "", $email);
     
-    $api = $APIs."validator/paypal/?list=$email&proxy=$Proxies&proxyAuth=$proxy_Auth&type_proxy=$type_proxy&apikey=$apikey";
+    $api = $APIs."/validator/paypal/?list=$email&proxy=$Proxies&proxyAuth=$proxy_Auth&type_proxy=$type_proxy&apikey=$apikey";
     // CURL
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $api);
